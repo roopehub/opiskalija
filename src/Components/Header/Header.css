@@ -1,0 +1,23 @@
+.Header {
+    color: #d7d1c9;
+    height: 7vh;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #696464;
+    z-index: 1000;
+    border-radius: 0 0 50px 50px;
+    -webkit-box-shadow: -1px 5px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 5px 5px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 5px 5px -1px rgba(0, 0, 0, 0.75);
+}
+
+.Header img {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 3vh;
+}

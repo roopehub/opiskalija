@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './CustomPopup.css'
 import { Popup } from 'react-leaflet';
 import { createReittiopasUrl } from '../../Controls/LocateControl/LocateControl';
 import Button from '@material-ui/core/Button';
@@ -9,7 +10,7 @@ class customPopup extends Component {
     render() {
         let price = String(this.props.content.beer_price).split('');
         return (
-            <Popup>
+            <Popup className={classes.Popup}>
                 <div>
                     <h2>{this.props.content.name}</h2>
                     <hr/>
