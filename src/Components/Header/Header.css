@@ -1,7 +1,7 @@
 .Header {
     color: #d7d1c9;
-    height: 7vh;
-    width: 50%;
+    height: 6vh;
+    width: 45%;
     position: relative;
     margin: 0 auto;
     top: 0;
@@ -17,7 +17,7 @@
 }
 
 .Header img {
-    width: 5vh;
-    height: 5vh;
-    margin-right: 3vh;
+    width: 4vh;
+    height: 4vh;
+    margin-right: 2vh;
 }
