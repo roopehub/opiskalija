@@ -6,23 +6,16 @@ import {BIG, BIY, BIO, BIR} from '../CustomIcon/CustomIcon';
 
 class CustomMarker extends Component {
 
-    state = {
-        icon: null
-    }
-
-    componentDidMount() {
-        let newIcon;
-        if (this.props.chosenIcon === 'BIG') newIcon = BIG;
-        if (this.props.chosenIcon === 'BIY') newIcon = BIY;
-        if (this.props.chosenIcon === 'BIO') newIcon = BIO;
-        if (this.props.chosenIcon === 'BIR') newIcon = BIR;
-        this.setState({icon: newIcon});
-        console.log(this.props.chosenIcon);
-    }
-
     render() {
+
+        let newIcon;
+        if (this.props.Icon === 'BIG') newIcon = BIG;
+        if (this.props.Icon === 'BIY') newIcon = BIY;
+        if (this.props.Icon === 'BIO') newIcon = BIO;
+        if (this.props.Icon === 'BIR') newIcon = BIR;
+
         return (
-            <Marker position={this.props.location} icon={this.state.icon} className={classes.CustomMarker}>
+            <Marker position={this.props.location} icon={newIcon} className={classes.CustomMarker}>
                 <CustomPopup content={this.props.popUp} />
             </Marker>
         )

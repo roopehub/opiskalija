@@ -47,7 +47,6 @@ class LocateControl extends Component {
 
     const lc = new Locate(options);
     lc.addTo(map);
-    console.log(lc);
 
     if (lc._map._lastCenter) {
         this.setState({currentLocation: [lc._map._lastCenter.lat, lc._map._lastCenter.lng]})
