@@ -1,4 +1,5 @@
 import L from 'leaflet';
+import classes from './CustomIcon.css';
 
     export const BIG = new L.Icon({
         iconUrl: require('../../Assets/Images/beer_icon_green.png'),
@@ -8,8 +9,8 @@ import L from 'leaflet';
         shadowUrl: null,
         shadowSize: null,
         shadowAnchor: null,
-        iconSize: new L.Point(35, 45),
-        className: 'CustomMarker'
+        iconSize: new L.Point(40, 50),
+        className: classes.CustomMarker
     });
     
     export const BIY = new L.Icon({
@@ -18,7 +19,7 @@ import L from 'leaflet';
         iconAnchor: [0, 0],
         popupAnchor: [17, 10],
         iconSize: new L.Point(35, 45),
-        className: 'CustomMarker'
+        className: classes.CustomMarker
     });
     
     export const BIO = new L.Icon({
@@ -27,7 +28,7 @@ import L from 'leaflet';
         iconAnchor: [0, 0],
         popupAnchor: [17, 10],
         iconSize: new L.Point(35, 45),
-        className: 'CustomMarker'
+        className: classes.CustomMarker
     });
     
     export const BIR = new L.Icon({
@@ -36,7 +37,7 @@ import L from 'leaflet';
         iconAnchor: [0, 0],
         popupAnchor: [17, 10],
         iconSize: new L.Point(35, 45),
-        className: 'CustomMarker'
+        className: classes.CustomMarker
     });
 
 

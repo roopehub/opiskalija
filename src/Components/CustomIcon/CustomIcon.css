@@ -1,0 +1,8 @@
+.CustomMarker {
+    opacity: 0.8;
+}
+
+.CustomMarker:hover {
+    opacity: 1;
+}
+

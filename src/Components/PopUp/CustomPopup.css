@@ -1,6 +1,32 @@
 .Popup {
-    
+    font-family: 'Montserrat', sans-serif;
     /* -webkit-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.75);
     box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.75); */
 }
+
+.Popup h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200% !important;
+}
+
+.CenteredDiv {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.CenteredDiv button {
+    margin: 0 auto;
+}
+
+.DrinkDiv  {
+  
+}
+
+.DrinkDiv p {
+    margin: 5px 0;
+}
+
+
