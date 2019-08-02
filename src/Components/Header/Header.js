@@ -5,6 +5,7 @@ const header = (props) => (
 <div className={classes.Header}>
     <img src="https://cdn.shopify.com/s/files/1/0390/9805/products/Hop-Pale-Ale_grande.png?v=1395710510" />
     <h1>OPISKALIJA</h1>
+    <i>Beta 1.0</i>
 </div>
 );
 

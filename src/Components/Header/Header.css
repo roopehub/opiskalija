@@ -1,7 +1,7 @@
 .Header {
     color: #d7d1c9;
     height: 6vh;
-    width: 45%;
+    width: 50%;
     position: relative;
     margin: 0 auto;
     top: 0;
@@ -20,4 +20,11 @@
     width: 4vh;
     height: 4vh;
     margin-right: 2vh;
+}
+
+.Header i {
+   color: #ccc;
+   font-size: 60%;
+   margin-left: 5px;
+   margin-top: -10px;
 }

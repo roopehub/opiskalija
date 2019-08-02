@@ -3,6 +3,7 @@ import classes from './CustomPopup.css'
 import { Popup } from 'react-leaflet';
 import { createReittiopasUrl } from '../../Controls/LocateControl/LocateControl';
 import Button from '@material-ui/core/Button';
+import CityBikes from '../CityBikes/CityBikes';
 
 class customPopup extends Component {
     
@@ -23,7 +24,8 @@ class customPopup extends Component {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             boxShadow: '1px 2px 3px',
-            marginBottom: '20px'
+            marginBottom: '20px',
+            margin: '0 auto'
         }
 
         return (
@@ -58,9 +60,9 @@ class customPopup extends Component {
                         <Button variant="outlined" onClick={() => createReittiopasUrl(this.props)}>Road to Beer! <i className="material-icons">tram</i> </Button>
                     </div>
                     <p style={{textAlign: 'center', margin: '0'}}>--- or ---</p>
-                    <div className={classes.CenteredDiv}>
-                        <Button variant="outlined"> Get citybike <i className="material-icons">directions_bike</i> </Button>
-                    </div>
+                    {/* <div className={classes.CenteredDiv}>
+                        <CityBikes />
+                    </div> */}
                 </div>
             </Popup>
         )
