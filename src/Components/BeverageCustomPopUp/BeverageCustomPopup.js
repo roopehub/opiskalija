@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-import classes from './CustomPopup.css'
+import classes from './BeverageCustomPopup.css'
 import { Popup } from 'react-leaflet';
 import { createReittiopasUrl } from '../../Controls/LocateControl/LocateControl';
 import Button from '@material-ui/core/Button';
-import CityBikes from '../CityBikes/CityBikes';
+import CityBikes from '../../Containers/CityBikesMarkers/CityBikesMarkers';
 
-class customPopup extends Component {
-    
+class beverageCustomPopup extends Component {
+    state = {
+        showCitybikes: false,
+        cityBikeText: 'Show'
+    }
+
+    onHandleDisplayCitybikes = () => {
+        //console.log("B "+this.state.showCitybikes);
+        this.setState(prevState => ({ showCitybikes: !prevState.showCitybikes}));
+        //console.log("A "+ this.state.showCitybikes);
+
+        let buttonText = this.state.cityBikeText === 'Show' ? 'Hide' : 'Show';
+        this.setState({cityBikeText: buttonText});
+    }
+
     render() {
-
         let beerPrice = null;
         let ciderPrice = null;
         let longdrinkPrice = null;
@@ -57,16 +69,17 @@ class customPopup extends Component {
                     }
 
                     <div className={classes.CenteredDiv}>
-                        <Button variant="outlined" onClick={() => createReittiopasUrl(this.props)}>Road to Beer! <i className="material-icons">tram</i> </Button>
+                        <Button variant="outlined" onClick={() => createReittiopasUrl(this.props)}> Road to Beer! <i className="material-icons">tram</i> </Button>
                     </div>
-                    <p style={{textAlign: 'center', margin: '0'}}>--- or ---</p>
-                    {/* <div className={classes.CenteredDiv}>
-                        <CityBikes />
-                    </div> */}
+                    <p style={{textAlign: 'center', margin: '0'}}> --- or --- </p>
+                    <div className={classes.CenteredDiv}>
+                        <Button variant="outlined" onClick={this.onHandleDisplayCitybikes}> {this.state.cityBikeText} citybikes! <i className="material-icons">directions_bike</i> </Button>
+                    </div>
+                   { this.state.showCitybikes ? <CityBikes/> : null }
                 </div>
             </Popup>
         )
     }
 }
 
-export default customPopup;
+export default beverageCustomPopup;

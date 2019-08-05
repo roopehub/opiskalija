@@ -10,28 +10,6 @@ class LocateControl extends Component {
         currentLocation: null
     }
 
-  // createReittiopasUrl = (props) => {
-  //     console.log("2");
-  //     console.log(this.state.currentLocation);
-  //     const today = new Date();
-  //     const hour = today.getHours();
-  //     const minutes = today.getMinutes();
-  //     const lat = 60.224766;
-  //     const lng = 25.012219;
-  //     let dest = props.content.address ? props.content.address.replace(/\s/g, "") : '';
-      
-  //     axios.get('https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='+ lat +'&lon='+ lng +'')
-  //     .then((data)=> {
-  //         console.log(data);
-  //         return "";
-  //     });
-  
-  //     let url = "http://www.reittiopas.fi/fi/?"+ from +"&to="+ dest +",helsinki&hour="+ hour +"&minute="+ minutes +"";
-  //     console.log(url);
-      
-  //     window.open(url, "_blank");
-  // }
-
   componentDidMount() {
     const options = {
         ...this.props,

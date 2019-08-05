@@ -40,8 +40,14 @@ import classes from './CustomIcon.css';
         className: classes.CustomMarker
     });
 
-
-
+    export const BIKE = new L.Icon({
+        iconUrl: require('../../Assets/Images/bike.png'),
+        iconRetinaUrl: require('../../Assets/Images/bike.png'),
+        iconAnchor: [0, 0],
+        popupAnchor: [10, 0],
+        iconSize: new L.Point(30, 30),
+        className: classes.CustomMarker
+    });
 
 // red #ff8080
 // orange #ffba92

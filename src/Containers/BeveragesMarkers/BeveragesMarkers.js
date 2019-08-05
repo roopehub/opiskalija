@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import CustomMarker from '../../Components/Marker/CustomMarker';
+import CustomMarker from '../../Components/CustomMarker/CustomMarker';
 
 class CustomMarkers extends Component {
 
@@ -71,11 +71,8 @@ class CustomMarkers extends Component {
 
         return (
             this.state.beerData.map((item, i) => {
-                let popupContent = {
-                    ...item
-                }
                 let icon = chooseIcon(item.beer_price);
-                return <CustomMarker location={[item.location.latitude, item.location.longitude]} key={item.ec5_uuid} popUp={popupContent} Icon={chosenIcon}/>
+                return <CustomMarker location={[item.location.latitude, item.location.longitude]} key={item.ec5_uuid} popUp={{...item}} Icon={chosenIcon} type='beverage'/>
             })
         )
     }

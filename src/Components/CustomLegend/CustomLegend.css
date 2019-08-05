@@ -1,0 +1,36 @@
+.CustomLegend {
+    list-style: none;
+    background-color: #fff !important;
+}
+
+p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.Li {
+    display: inline-flex;
+}
+
+span {
+    margin: auto;
+    margin-right: 4px;
+    padding: 4px;
+    border-radius: 100px;
+}
+
+.Green {
+    background-color: #c6f1d6;
+}
+
+.Yellow {
+    background-color: #eceba7;
+}
+
+.Orange {
+    background-color: #ffba92;
+}
+
+.Red {
+    background-color: #ff8080;
+}
