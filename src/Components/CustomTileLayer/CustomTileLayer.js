@@ -9,25 +9,25 @@ const customTileLayer = (props) => (
     <LayersControl position="topright">
       <LayersControl.Overlay name="Beers" checked>
           <LayerGroup>
-            <CustomMarkerCluster maxRadius={20}>
+            <CustomMarkerCluster maxRadius={10}>
                 <BeveragesMarkers />
             </CustomMarkerCluster>
           </LayerGroup>
       </LayersControl.Overlay>
       <LayersControl.Overlay name="City bikes">
           <LayerGroup>
-            <CustomMarkerCluster maxRadius={80}>
+            <CustomMarkerCluster maxRadius={50}>
               <CityBikes/>
             </CustomMarkerCluster>
           </LayerGroup>
       </LayersControl.Overlay>
-      <LayersControl.BaseLayer name="Old school">
+      <LayersControl.BaseLayer name="Old school" checked>
           <TileLayer
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
           url='http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
           />
       </LayersControl.BaseLayer>
-      <LayersControl.BaseLayer name="Go Green" checked>
+      <LayersControl.BaseLayer name="Go Green">
           <TileLayer
           attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
           url='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGNyb29wZSIsImEiOiJjam9rY2luMDYwMnh0M3BteDNmNmZwOXprIn0.xxguOLMfAlFJX2s_XPqiLA'
