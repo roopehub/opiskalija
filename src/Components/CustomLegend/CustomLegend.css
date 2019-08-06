@@ -1,6 +1,8 @@
 .CustomLegend {
     list-style: none;
-    background-color: #fff !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 p {

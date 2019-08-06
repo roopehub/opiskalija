@@ -69,7 +69,7 @@ class CustomMarkers extends Component {
             }
         }
 
-        return (
+        return ( 
             this.state.beerData.map((item, i) => {
                 let icon = chooseIcon(item.beer_price);
                 return <CustomMarker location={[item.location.latitude, item.location.longitude]} key={item.ec5_uuid} popUp={{...item}} Icon={chosenIcon} type='beverage'/>
