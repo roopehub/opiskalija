@@ -2,18 +2,23 @@ import React from 'react';
 import { TileLayer, LayersControl, LayerGroup } from 'react-leaflet';
 import CityBikes from '../../Containers/CityBikesMarkers/CityBikesMarkers';
 import BeveragesMarkers from '../../Containers/BeveragesMarkers/BeveragesMarkers';
+import CustomMarkerCluster from '../../Hoc/CustomMarkerCluster/CustomMarkerCluster';
 
 const customTileLayer = (props) => (
   
     <LayersControl position="topright">
       <LayersControl.Overlay name="Beers" checked>
           <LayerGroup>
-              <BeveragesMarkers />
+            <CustomMarkerCluster maxRadius={20}>
+                <BeveragesMarkers />
+            </CustomMarkerCluster>
           </LayerGroup>
       </LayersControl.Overlay>
       <LayersControl.Overlay name="City bikes">
           <LayerGroup>
+            <CustomMarkerCluster maxRadius={80}>
               <CityBikes/>
+            </CustomMarkerCluster>
           </LayerGroup>
       </LayersControl.Overlay>
       <LayersControl.BaseLayer name="Old school">

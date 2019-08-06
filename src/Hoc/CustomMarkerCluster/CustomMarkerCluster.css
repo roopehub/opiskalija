@@ -1,40 +1,42 @@
-.leaflet-control-scale {
-    margin-bottom: 40px !important;
-}
-
-.markerClusterSmall {
+.MarkerClusterSmall {
     border-radius: 20px;
     font-size: 0.6vw;
     color: #fff;
     font-weight: 900;
     font-family: Open Sans;
     text-transform: uppercase;
+    background-color: green;
+    padding: 10px;
  }
- .markerClusterMedium {
+ .MarkerClusterMedium {
     border-radius: 40px;
     font-size: 0.6vw;
     color: #fff;
     font-weight: 900;
     font-family: Open Sans;
     text-transform: uppercase;
+    background-color: yellow;
  }
- .markerClusterLarge {
+ .MarkerClusterLarge {
     border-radius: 70px;
     font-size: 0.6vw;
     color: #fff;
     font-weight: 900;
     font-family: Open Sans;
     text-transform: uppercase;
+    background-color: orange;
  }
- .markerClusterLargeXL {
+ .MarkerClusterLargeXL {
     border-radius: 70px;
     font-size: 0.6vw;
     color: #fff;
     font-weight: 900;
     font-family: Open Sans;
     text-transform: uppercase;
+    background-color: red;
  }
- .markerClusterLabel {
+ .MarkerClusterLabel {
+    font-size: 150%;
     display: flex;
     justify-content: center;
     align-items: center;

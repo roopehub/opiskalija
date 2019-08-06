@@ -35,7 +35,6 @@ class CustomMap extends Component {
                     className={classes.Mapp}
                     layers={layers}>
                     <CustomTileLayer/>
-                    {/* <BeveragesMarkers /> */}
                     <LocationControl />
                     <CustomLegend />
                     <ScaleControl/>
