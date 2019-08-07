@@ -13,11 +13,14 @@ class beverageCustomPopup extends Component {
 
     onHandleDisplayCitybikes = () => {
         //console.log("B "+this.state.showCitybikes);
-        this.setState(prevState => ({ showCitybikes: !prevState.showCitybikes}));
-        //console.log("A "+ this.state.showCitybikes);
+        // this.setState(prevState => ({ showCitybikes: !prevState.showCitybikes}));
+        // //console.log("A "+ this.state.showCitybikes);
 
-        let buttonText = this.state.cityBikeText === 'Show' ? 'Hide' : 'Show';
-        this.setState({cityBikeText: buttonText});
+        // let buttonText = this.state.cityBikeText === 'Show' ? 'Hide' : 'Show';
+        // this.setState({cityBikeText: buttonText});
+
+        //semi purkka ratkaisu kaupunkipyörien togglaamiseen
+        document.getElementsByClassName("leaflet-control-layers-selector")[4].click();
     }
 
     render() {
@@ -67,13 +70,19 @@ class beverageCustomPopup extends Component {
                             <p>€ = <strong>{longdrinkPrice[0]}.{longdrinkPrice[1]}</strong></p>
                         </div>) : null
                     }
+                    { 
+                        this.props.content.date ? (
+                        <div className={classes.DrinkDiv}>
+                            <p>Updated: <i>{this.props.content.date}</i></p>
+                        </div>) : null
+                    }
 
                     <div className={classes.CenteredDiv}>
                         <Button variant="outlined" onClick={() => createReittiopasUrl(this.props)}> Road to Beer! <i className="material-icons">tram</i> </Button>
                     </div>
                     <p style={{textAlign: 'center', margin: '0'}}> --- or --- </p>
                     <div className={classes.CenteredDiv}>
-                        <Button variant="outlined" onClick={this.onHandleDisplayCitybikes}> {this.state.cityBikeText} citybikes! <i className="material-icons">directions_bike</i> </Button>
+                        <Button variant="outlined" onClick={this.onHandleDisplayCitybikes}> Toggle citybikes! <i className="material-icons">directions_bike</i> </Button>
                     </div>
                    { this.state.showCitybikes ? <CityBikes/> : null }
                 </div>

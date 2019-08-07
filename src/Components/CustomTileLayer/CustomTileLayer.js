@@ -9,14 +9,14 @@ const customTileLayer = (props) => (
     <LayersControl position="topright">
       <LayersControl.Overlay name="Beers" checked>
           <LayerGroup>
-            <CustomMarkerCluster maxRadius={10}>
+            <CustomMarkerCluster maxRadius={15} type='Beer'>
                 <BeveragesMarkers />
             </CustomMarkerCluster>
           </LayerGroup>
       </LayersControl.Overlay>
       <LayersControl.Overlay name="City bikes">
           <LayerGroup>
-            <CustomMarkerCluster maxRadius={50}>
+            <CustomMarkerCluster maxRadius={50} type='Bike'>
               <CityBikes/>
             </CustomMarkerCluster>
           </LayerGroup>
