@@ -23,7 +23,6 @@ class CustomMarkers extends Component {
                 });
                 this.setState({priceList: beerPrices});
             }
-        
         })
         .catch((error) => {
             console.log(error);
@@ -34,26 +33,36 @@ class CustomMarkers extends Component {
         const prices = [...this.state.priceList];
         const mappedPrices = prices.map((price) => {
             if (price === 4) {
-                return price = 40
+                return 40
             }
-            else if (price === 5) {
-                return price = 50
+            if (price === 5) {
+                return 50
+            }
+            if (price === 6) {
+                return 60
+            }
+            if (price === 7) {
+                return 70
+            }
+            if (price === 8) {
+                return 80
+            }
+            if (price === 9) {
+                return 90
             }
             return price;
-        })
+        });
+        
         const sortedPrices = mappedPrices.sort((a, b) => a - b);
         return sortedPrices
     }
 
     render() {
-
         let chosenIcon = null;
 
         let chooseIcon = (price) => {
             const prices = this.handlePrices();
             const divider = prices.length / 4;
-            //console.log("divi " + prices.length);
-            //console.log("inde " +prices.indexOf(price));
     
             if (prices.indexOf(price) === 0 || prices.indexOf(price) <= divider) {
                 chosenIcon = 'BIG';
