@@ -3,9 +3,7 @@ import { withLeaflet } from "react-leaflet";
 import Locate from "leaflet.locatecontrol";
 
 class LocateControl extends Component {
-
-    //http://www.reittiopas.fi/fi/?from=keskuskatu+2&to=kuusitie+5,helsinki&hour=16&minute=15
-
+  
     state = {
         currentLocation: null
     }

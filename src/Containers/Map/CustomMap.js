@@ -4,15 +4,12 @@ import { Map } from 'react-leaflet';
 import classes from './CustomMap.css';
 import BeveragesMarkers from '../BeveragesMarkers/BeveragesMarkers';
 
-
 import Header from '../../Components/Header/Header';
 import CustomTileLayer from '../../Components/CustomTileLayer/CustomTileLayer';
 import LocationControl from '../../Controls/LocationControl/LocationControl';
 import CustomLegend from '../../Components/CustomLegend/CustomLegend';
 import ScaleControl from '../../Controls/ScaleControl/ScaleControl';
 import Aux from '../../Hoc/Auxiliary/Auxiliary';
-
-
 
 class CustomMap extends Component {
     state = {

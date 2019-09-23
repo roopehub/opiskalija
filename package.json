@@ -45,6 +45,7 @@
     "react-dom": "^16.8.6",
     "react-https-redirect": "^1.1.0",
     "react-leaflet": "^2.4.0",
+    "react-leaflet-control": "^2.1.1",
     "react-leaflet-locate-control": "^0.1.6",
     "react-leaflet-markercluster": "^2.0.0-rc3",
     "resolve": "1.6.0",

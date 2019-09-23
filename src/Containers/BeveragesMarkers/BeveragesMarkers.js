@@ -33,27 +33,30 @@ class CustomMarkers extends Component {
         const prices = [...this.state.priceList];
         const mappedPrices = prices.map((price) => {
             if (price === 4) {
-                return 40
+                return 40;
             }
-            if (price === 5) {
-                return 50
+            else if (price === 5) {
+                return 50;
             }
-            if (price === 6) {
-                return 60
+            else if (price === 6) {
+                return 60;
             }
-            if (price === 7) {
-                return 70
+            else if (price === 7) {
+                return 70;
             }
-            if (price === 8) {
-                return 80
+            else if (price === 8) {
+                return 80;
             }
-            if (price === 9) {
-                return 90
+            else if (price === 9) {
+                return 90;
             }
-            return price;
+            else {
+                return price;
+            }
         });
         
         const sortedPrices = mappedPrices.sort((a, b) => a - b);
+        console.log(sortedPrices);
         return sortedPrices
     }
 
