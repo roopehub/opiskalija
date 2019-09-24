@@ -24,11 +24,9 @@ class beverageCustomPopup extends Component {
     }
 
     render() {
-        let beerPrice = null;
         let ciderPrice = null;
         let longdrinkPrice = null;
 
-        //if (this.props.content.beer_price) beerPrice = String(this.props.content.beer_price).split('');
         if (this.props.content.cider_price) ciderPrice = String(this.props.content.cider_price).split('');
         if (this.props.content.longdrink_price) ciderPrice = String(this.props.content.longdrink_price).split('');
         
@@ -36,6 +34,7 @@ class beverageCustomPopup extends Component {
             backgroundImage: 'url(' + this.props.content.photo + ')',
             width: '25vh',
             height: '20vh',
+            maxWidth: '100%',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             boxShadow: '1px 2px 3px',
@@ -50,10 +49,12 @@ class beverageCustomPopup extends Component {
                     { 
                       this.props.content.photo ? <div style={pictureStyles}></div> : null
                     }
+
                     <div className={classes.DrinkDiv}>
                         <p>{this.props.content.beer_name}</p>
                         <p>€ = <strong>{this.props.content.beer_price}</strong></p>
                     </div>
+
                     <br />
                     { 
                         this.props.content.cider_name && ciderPrice ? ( 
