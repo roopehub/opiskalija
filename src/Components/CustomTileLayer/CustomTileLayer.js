@@ -21,7 +21,6 @@ componentDidMount() {
   .then((response) => {
       if (response) {
           this.setState({weatherData: response.data.main.temp});
-          console.log(this.state.weatherData);
       }
   })
   .catch((error) => {
@@ -31,9 +30,9 @@ componentDidMount() {
 
   render() {
 
-    let temp = null;
-    temp = this.state.weatherData;
-    console.log("wd: " + temp);
+    // let temp = null;
+    // temp = this.state.weatherData;
+    // console.log("wd: " + temp);
 
     return (
       <LayersControl position="topright">

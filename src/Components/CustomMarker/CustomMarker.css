@@ -6,6 +6,8 @@
             -o-animation: fadein 1s; /* Opera < 12.1 */
             animation: fadein 1.5s;
     }
+
+ 
     
     @keyframes fadein {
         from { opacity: 0; }

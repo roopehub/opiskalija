@@ -31,32 +31,31 @@ class CustomMarkers extends Component {
 
     handlePrices = () => {
         const prices = [...this.state.priceList];
-        const mappedPrices = prices.map((price) => {
-            if (price === 4) {
-                return 40;
-            }
-            else if (price === 5) {
-                return 50;
-            }
-            else if (price === 6) {
-                return 60;
-            }
-            else if (price === 7) {
-                return 70;
-            }
-            else if (price === 8) {
-                return 80;
-            }
-            else if (price === 9) {
-                return 90;
-            }
-            else {
-                return price;
-            }
-        });
+        // const mappedPrices = prices.map((price) => {
+        //     if (price === 4) {
+        //         return 40;
+        //     }
+        //     else if (price === 5) {
+        //         return 50;
+        //     }
+        //     else if (price === 6) {
+        //         return 60;
+        //     }
+        //     else if (price === 7) {
+        //         return 70;
+        //     }
+        //     else if (price === 8) {
+        //         return 80;
+        //     }
+        //     else if (price === 9) {
+        //         return 90;
+        //     }
+        //     else {
+        //         return price;
+        //     }
+        // });
         
-        const sortedPrices = mappedPrices.sort((a, b) => a - b);
-        console.log(sortedPrices);
+        const sortedPrices = prices.sort((a, b) => a - b);
         return sortedPrices
     }
 
