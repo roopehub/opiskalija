@@ -13,7 +13,7 @@ class CustomMarkers extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://five.epicollect.net/api/export/entries/opiskalija?form_ref=2ed54be05c3048cbaf1450a091b486ff_5d38e7224028c')
+        axios.get('https://five.epicollect.net/api/export/entries/opiskalija?form_ref=2ed54be05c3048cbaf1450a091b486ff_5d38e7224028c&per_page=999')
         .then((response) => {
             if (response) {
                 const data = response.data.data.entries;
