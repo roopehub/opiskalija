@@ -6,5 +6,5 @@
 
 <p> I used mostly ReactJS library for this project with leafletJS (+React-leaflet).</p>
 <i>I also used [Create React App](https://github.com/facebookincubator/create-react-app) to create a foundation for the project.</i>
-
+<br>
 <p> I have used ~2weeks for this so it's not too finely tuned and might lack some features. Also the datacollection is a major obstacle for the site to be used widely</p>
