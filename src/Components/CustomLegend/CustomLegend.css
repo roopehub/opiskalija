@@ -15,6 +15,10 @@ p {
     display: inline-flex;
 }
 
+.Li p {
+    color: white;
+}
+
 span {
     margin: auto;
     margin-right: 4px;

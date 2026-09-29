@@ -67,12 +67,6 @@ class CustomTileLayer extends Component {
             url="https://basemap.queeniemella.cc/tiles/countries/{z}/{x}/{y}.png"
           />
         </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Are you not entertained">
-          <TileLayer
-            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-        </LayersControl.BaseLayer>
       </LayersControl>
     )
   }

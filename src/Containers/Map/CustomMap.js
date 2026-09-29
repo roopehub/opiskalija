@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import L from 'leaflet';
 import { Map } from 'react-leaflet';
 import classes from './CustomMap.css';
-import BeveragesMarkers from '../BeveragesMarkers/BeveragesMarkers';
 
 import Header from '../../Components/Header/Header';
 import CustomTileLayer from '../../Components/CustomTileLayer/CustomTileLayer';
@@ -18,34 +16,13 @@ class CustomMap extends Component {
     }
 
     render() {
-        let grayscale,
-            streets
-
-        const layers = [
-            grayscale = L.tileLayer(
-                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                {
-                    id: 'MapID',
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }
-            ),
-            streets = L.tileLayer(
-                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                {
-                    id: 'MapID',
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }
-            )
-        ]
-
         return (
             <Aux>
                 <Header />
                 <Map 
                     center={this.state.startPos}
                     zoom={this.state.startZoom}
-                    className={classes.Mapp}
-                    layers={layers}>
+                    className={classes.Mapp}>
                     <CustomTileLayer/>
                     <LocationControl />
                     <CustomLegend />
