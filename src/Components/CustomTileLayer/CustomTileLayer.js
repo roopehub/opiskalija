@@ -5,6 +5,7 @@ import BeveragesMarkers from '../../Containers/BeveragesMarkers/BeveragesMarkers
 import CustomMarkerCluster from '../../Hoc/CustomMarkerCluster/CustomMarkerCluster';
 import axios from 'axios';
 import CustomParks from '../CustomParks/CustomParks';
+import classes from './CustomTileLayer.css';
 
 class CustomTileLayer extends Component {
 
@@ -61,15 +62,10 @@ componentDidMount() {
       } */}
   
       <LayersControl.BaseLayer name="Old school" checked>
-        <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png"
-        />
-      </LayersControl.BaseLayer>
-      <LayersControl.BaseLayer name="Go black n white">
-         <TileLayer
+          <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png"
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            className={classes.Minimalmap}
           />
       </LayersControl.BaseLayer>
       <LayersControl.BaseLayer name="Are you not entertained">
