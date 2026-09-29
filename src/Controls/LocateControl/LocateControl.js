@@ -15,7 +15,7 @@ export const createReittiopasUrl = (props) => {
                 .then((resp) => {
                     let address = resp.data.display_name.split(",");
                     let from = ([].concat(address[0], address[1], address[2])).join("").replace(/\s/g, "");
-                    let url = "http://www.reittiopas.fi/fi/?from=" + from + "&to=" + dest + ",helsinki&hour=" + hour + "&minute=" + minutes + "";
+                    let url = "https://www.reittiopas.fi/fi/?from=" + from + "&to=" + dest + ",helsinki&hour=" + hour + "&minute=" + minutes + "";
                     window.open(url, "_blank");
                 });
         },

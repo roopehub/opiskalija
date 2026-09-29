@@ -15,7 +15,7 @@ class CustomParks extends Component {
 //wanha
 //https://kartta.hel.fi/ws/geoserver/avoindata/wfs?request=GetFeature&service=WFS&version=1.1.0&typeName=avoindata:YLRE_Viheralue_alue&outputFormat=json
 //uusi
-//http://geoserver.hel.fi/geoserver/seutukartta/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=seutukartta%3AViheralueet&maxFeatures=1000000&outputFormat=application%2Fjson
+//https://geoserver.hel.fi/geoserver/seutukartta/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=seutukartta%3AViheralueet&maxFeatures=1000000&outputFormat=application%2Fjson
 
     componentDidMount() {
         axios.get('https://kartta.hel.fi/ws/geoserver/avoindata/wfs?request=GetFeature&service=WFS&version=1.1.0&typeName=avoindata:YLRE_Viheralue_alue&outputFormat=json')
