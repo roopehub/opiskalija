@@ -22,6 +22,7 @@ class CustomMap extends Component {
                 <Map 
                     center={this.state.startPos}
                     zoom={this.state.startZoom}
+                    maxZoom={19}
                     className={classes.Mapp}>
                     <CustomTileLayer/>
                     <LocationControl />
