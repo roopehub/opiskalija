@@ -63,7 +63,7 @@ componentDidMount() {
       <LayersControl.BaseLayer name="Old school" checked>
           <TileLayer
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-          url={`http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?api_key=${process.env.import.meta.env.VITE_CARTO_API_KEY}}`}
+          url={`http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?api_key=${process.env.import.meta.env.process.env.REACT_APP_CARTO_API_KEY}}`}
           />
       </LayersControl.BaseLayer>
       {/* <LayersControl.BaseLayer name="Go Green">
