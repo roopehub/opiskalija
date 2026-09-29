@@ -16,27 +16,28 @@ class CustomMap extends Component {
         startPos: [60.175, 24.94],
         startZoom: 13,
     }
+
     render() {
         let grayscale,
             streets
+
         const layers = [
-            [
-                grayscale = L.tileLayer(
-                    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    {
-                        id: 'MapID',
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }
-                ),
-                streets = L.tileLayer(
-                    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    {
-                        id: 'MapID',
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }
-                )
-            ]
+            grayscale = L.tileLayer(
+                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    id: 'MapID',
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }
+            ),
+            streets = L.tileLayer(
+                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    id: 'MapID',
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }
+            )
         ]
+
         return (
             <Aux>
                 <Header />
