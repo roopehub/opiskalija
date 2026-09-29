@@ -12,22 +12,22 @@ class CustomTileLayer extends Component {
   constructor() {
     super();
     this.state = {
-        weatherData: null,
-        parkData: null
+      weatherData: null,
+      parkData: null
     }
-}
+  }
 
-componentDidMount() {
-  axios.get('https://api.openweathermap.org/data/2.5/weather?q=Helsinki&APPID=9aa546b3b7c7f8f692117d6a020e9966&units=metric')
-  .then((response) => {
-      if (response) {
-          this.setState({weatherData: response.data.main.temp});
-      }
-  })
-  .catch((error) => {
-      console.log(error);
-  })
-}
+  componentDidMount() {
+    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Helsinki&APPID=9aa546b3b7c7f8f692117d6a020e9966&units=metric')
+      .then((response) => {
+        if (response) {
+          this.setState({ weatherData: response.data.main.temp });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
 
   render() {
 
@@ -37,22 +37,22 @@ componentDidMount() {
 
     return (
       <LayersControl position="topright">
-      <LayersControl.Overlay name="Beers" checked>
+        <LayersControl.Overlay name="Beers" checked>
           <LayerGroup>
             <CustomMarkerCluster maxRadius={5} type='Beer'>
-                <BeveragesMarkers />
+              <BeveragesMarkers />
             </CustomMarkerCluster>
           </LayerGroup>
-      </LayersControl.Overlay>
-      <LayersControl.Overlay name="City bikes">
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name="City bikes">
           <LayerGroup>
             <CustomMarkerCluster maxRadius={50} type='Bike'>
-              <CityBikes/>
+              <CityBikes />
             </CustomMarkerCluster>
           </LayerGroup>
-      </LayersControl.Overlay>
+        </LayersControl.Overlay>
 
-      {/* { temp !== null ?
+        {/* { temp !== null ?
         <LayersControl.Overlay name={temp + " C, warm enough?"}>
            <LayerGroup>
              <CustomParks />
@@ -60,24 +60,23 @@ componentDidMount() {
        </LayersControl.Overlay>
        : null
       } */}
-  
-      <LayersControl.BaseLayer name="Old school" checked>
+
+        <LayersControl.BaseLayer name="Old school" checked>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-            className={classes.Minimalmap}
+            url="https://basemap.queeniemella.cc/tiles/countries/{z}/{x}/{y}.png"
           />
-      </LayersControl.BaseLayer>
-      <LayersControl.BaseLayer name="Are you not entertained">
-        <TileLayer
-          attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-      </LayersControl.BaseLayer>
-    </LayersControl>
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="Are you not entertained">
+          <TileLayer
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+        </LayersControl.BaseLayer>
+      </LayersControl>
     )
   }
-    
+
 };
 
 export default CustomTileLayer;
