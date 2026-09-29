@@ -61,21 +61,20 @@ componentDidMount() {
       } */}
   
       <LayersControl.BaseLayer name="Old school" checked>
-          <TileLayer
-          attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-          url={`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?key=${process.env.REACT_APP_CARTO_API_KEY}}`}
+        <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png"
+        />
+      </LayersControl.BaseLayer>
+      <LayersControl.BaseLayer name="Go black n white">
+         <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png"
           />
       </LayersControl.BaseLayer>
-      {/* <LayersControl.BaseLayer name="Go Green">
-          <TileLayer
-          attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
-          url='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGNyb29wZSIsImEiOiJjam9rY2luMDYwMnh0M3BteDNmNmZwOXprIn0.xxguOLMfAlFJX2s_XPqiLA'
-          id= 'mapbox.streets'
-          />
-      </LayersControl.BaseLayer> */}
       <LayersControl.BaseLayer name="Are you not entertained">
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
       </LayersControl.BaseLayer>
